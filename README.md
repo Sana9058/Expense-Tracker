@@ -28,7 +28,7 @@ This project is my milestone project as part of my **Unified Mentor internship**
 
 ## 🚀 Live Demo
 
-👉 [Explore the Expense Tracker live](YOUR_FIREBASE_HOSTING_LINK)
+👉 [Explore the Expense Tracker live](https://expense-tracker-2adbf.web.app)
 
 ---
 
@@ -55,7 +55,7 @@ This project is my milestone project as part of my **Unified Mentor internship**
 
 1. **Clone the repository:**
     ```bash
-    git clone https://github.com/YOUR_USERNAME/Expense-Tracker.git
+    git clone https://github.com/Sana9058/Expense-Tracker.git
     ```
 2. **Navigate to the project directory:**
     ```bash
@@ -75,8 +75,8 @@ This project is my milestone project as part of my **Unified Mentor internship**
 
 ## 🤝 Connect with me
 
-* **GitHub:** [https://github.com/YOUR_USERNAME](https://github.com/YOUR_USERNAME)  
-* **LinkedIn:** [https://www.linkedin.com/in/YOUR_LINKEDIN/](https://www.linkedin.com/in/YOUR_LINKEDIN/)
+* **GitHub:** [https://github.com/Sana9058/Expense-Tracker.git]  
+* **LinkedIn:** [https://www.linkedin.com/in/aijazsana/]
 
 ---
 
