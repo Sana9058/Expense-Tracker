@@ -75,7 +75,7 @@ This project is my milestone project as part of my **Unified Mentor internship**
 
 ## 🤝 Connect with me
 
-* **GitHub:** [https://github.com/Sana9058/Expense-Tracker.git]  
+* **GitHub:** [https://github.com/Sana9058]  
 * **LinkedIn:** [https://www.linkedin.com/in/aijazsana/]
 
 ---
