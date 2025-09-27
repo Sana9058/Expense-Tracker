@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <div class="container">
+        <h1>Expense Tracker</h1>
+
+        <div class="top-section">
+           <!-- Income Section -->
+           <div class="card">
+             <h2>Income</h2>
+             <label for="incomeInput">Enter your income</label>
+             <input type="number" id="incomeInput" placeholder="Enter your income">
+             <button id="saveIncomeBtn" type="button">Save Income</button>
+             <p>Net Balance: <span id="netBalance">0</span></p>
+            </div>
+
+            <!-- Add Expense Form -->
+            <div class="card">
+              <h2>Add Expense</h2>
+              <label for="description">Expense Description</label>
+              <input type="text" id="description" placeholder="Expense Description">
+
+              <label for="amount">Amount</label>
+              <input type="number" id="amount" placeholder="Amount">
+
+              <label for="category">Category</label>
+              <select id="category">
+                <option value="" disabled selected>Select Category</option>
+              </select>
+
+              <label for="date">Date</label>
+              <input type="date" id="date">
+
+              <button id="addExpenseBtn" type="button">Add Expense</button>
+            </div>
+        </div>
+
+        <!-- Charts Section  -->
+        <div class="chart-container">
+            <div class="card">
+                <h2>Expenses by Category</h2>
+                <canvas id="pieChart"></canvas>
+            </div>
+            <div class="card">
+                <h2>Monthly Spending</h2>
+                <canvas id="barChart"></canvas>
+            </div>
+        </div>
+
+        <!-- Expense List -->
+        <div class="card">
+            <h2>Expense List</h2>
+            <div class="table-wrapper">
+                <table id="expenseTable">
+                    <thead>
+                        <tr>
+                            <th>Description</th>
+                            <th>Category</th>
+                            <th>Amount</th>
+                            <th>Date</th>
+                            <th>Action</th> 
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Expenses will be dynamically added here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

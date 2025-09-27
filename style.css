@@ -1,0 +1,249 @@
+:root{
+  --primary-start: #6C63FF;
+  --primary-end:   #8A2BE2;
+  --primary-gradient: linear-gradient(135deg, var(--primary-start), var(--primary-end));
+
+  --success: #3EE1AF;
+  --danger:  #FF6B6B;
+  --warning: #FFD93D;
+
+  --background: #F7F8FA;
+  --card-bg: #FFFFFF;
+  --text-color: #1E1E2F;
+  --muted: #9CA3AF;
+  --border-color: #E6E9EE;
+  --shadow: rgba(30,30,47,0.06);
+  --font-stack: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-stack);
+  font-weight: 400;
+  background-color: var(--background);
+  color: var(--text-color);
+  line-height: 1.6;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+h1, h2 { font-weight: 600; }
+
+.container {
+  width: 100%;
+  max-width: 980px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+h1 {
+  font-size: 2.4rem;
+  color: var(--primary-start);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 8px;
+}
+
+.card {
+  background: var(--card-bg);
+  padding: 22px;
+  border-radius: 16px;
+  box-shadow: 0 14px 40px var(--shadow);
+  margin-bottom: 20px;
+  width: 100%;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(30,30,47,0.10);
+}
+.card h2 { color: var(--primary-start); }
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select {
+  width: 100%;
+  padding: 14px 12px;
+  margin-bottom: 15px;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  background-color: #FBFCFE;
+  color: var(--text-color);
+}
+
+input::placeholder {
+  color: var(--muted);
+  opacity: 1;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+select:focus {
+  outline: none;
+  border-color: var(--primary-start);
+  box-shadow: 0 6px 18px rgba(108,99,255,0.14);
+}
+
+.top-section {
+  display: grid;
+  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+button {
+  background: var(--primary-gradient);
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.18s ease, box-shadow 0.22s ease, opacity 0.18s;
+}
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px var(--shadow);
+  opacity: 0.98;
+}
+button:active { transform: translateY(-1px) scale(0.997); }
+
+button.delete-btn {
+  background: var(--danger);
+  color: #fff;
+  padding: 8px 14px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: transform 0.18s ease, box-shadow 0.22s ease;
+}
+button.delete-btn:hover {
+  background: #FF5252;
+  transform: scale(1.05);
+  box-shadow: 0 8px 18px rgba(255,82,82,0.12);
+}
+
+canvas {
+  max-width: 100%;
+  max-height: 240px;
+  margin: 15px auto 0;
+  display: block;
+  border-radius: 12px;
+  background: transparent;
+}
+
+#expenseTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  table-layout: fixed;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+#expenseTable th,
+#expenseTable td {
+  text-align: left;
+  padding: 12px 15px;
+  border-bottom: 1px solid var(--border-color);
+  word-wrap: break-word;
+  white-space: normal;
+}
+
+#expenseTable th {
+  background: linear-gradient(90deg, var(--primary-start), var(--primary-end));
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.82rem;
+}
+
+#expenseTable tbody tr:nth-child(even) {
+  background: #FBFCFE;
+}
+
+#expenseTable tbody tr:hover {
+  background: rgba(108,99,255,0.06);
+}
+
+.expense-amount {
+  font-weight: 700;
+  color: var(--danger);
+}
+
+.table-wrapper {
+  width: 100%;
+  max-height: 250px;
+  overflow-x: auto;
+  overflow-y: auto;
+}
+
+@media (max-width: 600px) {
+  h1 { font-size: 2rem; }
+  .card { padding: 15px; }
+  .top-section { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; }
+  .top-section .card input,
+  .top-section .card select,
+  .top-section .card button {
+    padding: 10px;
+    font-size: 0.9rem;
+    width: 100%;
+  }
+  #expenseTable {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  canvas { margin: 10px auto 0; }
+}
+
+.card table {
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+.chart-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.chart-container .card { 
+  flex: 1 1 400px; 
+}
+
+.card .table-wrapper { 
+  display: block; width: 100%; 
+}
+
+#netBalance{
+  font-size: 2rem;      
+  font-weight: 500;       
+  color: #6C63FF;
+  margin-left: 10px; 
+}
+
+p{
+  font-size: 1.5rem;
+  font-weight: 500;
+}
